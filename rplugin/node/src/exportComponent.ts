@@ -4,7 +4,7 @@ import Svelte from 'tree-sitter-svelte'
 
 export const exportComponent = (nvim: Nvim)=> async ()=>{
   nvim.print("exporting svelte component...")
-  const parser = new Parser()
+  // const parser = new Parser()
   // parser.setLanguage(Svelte)
 
   // const sourceCode = await nvim.getBufText()
