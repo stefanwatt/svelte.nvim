@@ -2,12 +2,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.exportComponent = void 0;
 const Parser = require("tree-sitter");
-const tree_sitter_svelte_1 = require("tree-sitter-svelte");
-const exportComponent = (nvim) => () => {
+const Svelte = require("tree-sitter-svelte");
+const exportComponent = (nvim) => async () => {
     nvim.print("exporting svelte component...");
     const parser = new Parser();
-    parser.setLanguage(tree_sitter_svelte_1.default);
-    const sourceCode = await getBufText();
+    parser.setLanguage(Svelte);
+    const sourceCode = await nvim.getBufText();
     const tree = parser.parse(sourceCode);
     // const query = new Query(Svelte, sourceCode)
     // console.log(query.predicates)

@@ -1,13 +1,13 @@
 import Parser = require("tree-sitter")
 import { Nvim } from "./nvim"
-import Svelte from 'tree-sitter-svelte'
+import * as Svelte from 'tree-sitter-svelte'
 
-export const exportComponent = (nvim: Nvim)=> ()=>{
+export const exportComponent = (nvim: Nvim)=> async ()=>{
   nvim.print("exporting svelte component...")
   const parser = new Parser()
   parser.setLanguage(Svelte)
 
-  const sourceCode = await getBufText()
+  const sourceCode = await nvim.getBufText()
   const tree = parser.parse(sourceCode)
   // const query = new Query(Svelte, sourceCode)
   // console.log(query.predicates)
