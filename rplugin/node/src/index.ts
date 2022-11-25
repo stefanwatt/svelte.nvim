@@ -7,7 +7,7 @@ import { Nvim } from './nvim'
 
 export = (plugin: neovim.NvimPlugin) => {
   const nvim = new Nvim(plugin.nvim)
-  plugin.registerCommand('SvelteExportComponent', exportComponent, { sync: false })
+  plugin.registerCommand('SvelteExportComponent', exportComponent(nvim), { sync: false })
 }
 
 
