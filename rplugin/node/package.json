@@ -1,21 +1,23 @@
 {
-  "dependencies": {
-    "neovim": "^4.10.1",
-    "tree-sitter": "^0.20.1",
-    "tree-sitter-svelte": "^0.10.1"
-  },
-  "name": "svelte.nvim",
+  "name": "nvim-typing-test",
   "version": "1.0.0",
-  "main": "./dist/index.js",
-  "source": "./src/index.ts",
-  "devDependencies": {
-    "@types/node": "^18.11.9"
-  },
+  "description": "",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ui": "tree-sitter build-wasm && tree-sitter web-ui"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "@types/node": "^18.0.4",
+    "fast-levenshtein": "^3.0.0",
+    "neovim": "^4.10.1",
+    "stopwatch-node": "^1.1.0",
+    "ts-stopwatch": "^0.0.4",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/fast-levenshtein": "^0.0.2",
+    "prettier": "^2.7.1"
+  }
 }
