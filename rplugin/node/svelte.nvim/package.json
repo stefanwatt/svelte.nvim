@@ -6,7 +6,8 @@
   },
   "name": "svelte.nvim",
   "version": "1.0.0",
-  "main": "dist/index.js",
+  "main": "./dist/main.js",
+  "source": "./src/main.ts",
   "devDependencies": {
     "@types/node": "^18.11.9"
   },
