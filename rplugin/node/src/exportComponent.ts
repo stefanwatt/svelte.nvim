@@ -1,4 +1,4 @@
-import Parser = require("tree-sitter")
+import * as Parser from "tree-sitter"
 import { Nvim } from "./nvim"
 import * as Svelte from 'tree-sitter-svelte'
 
