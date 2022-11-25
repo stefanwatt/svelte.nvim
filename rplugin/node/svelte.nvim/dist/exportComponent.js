@@ -5,4 +5,3 @@ const exportComponent = (nvim) => () => {
     nvim.print("exporting svelte component...");
 };
 exports.exportComponent = exportComponent;
-//# sourceMappingURL=exportComponent.js.map
