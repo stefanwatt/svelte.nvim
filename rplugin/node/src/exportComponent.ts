@@ -1,6 +1,6 @@
-import * as Parser from "tree-sitter"
+import  Parser from "tree-sitter"
 import { Nvim } from "./nvim"
-import * as Svelte from 'tree-sitter-svelte'
+import Svelte from 'tree-sitter-svelte'
 
 export const exportComponent = (nvim: Nvim)=> async ()=>{
   nvim.print("exporting svelte component...")
