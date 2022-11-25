@@ -32,4 +32,4 @@ module.exports = (plugin) => {
     const nvim = new nvim_1.Nvim(plugin.nvim);
     plugin.registerCommand('SvelteExportComponent', exportComponent_1.exportComponent, { sync: false });
 };
-//# sourceMappingURL=app.js.map
+//# sourceMappingURL=index.js.map
