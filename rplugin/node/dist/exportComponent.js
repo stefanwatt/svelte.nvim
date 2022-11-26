@@ -2,7 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.exportComponent = void 0;
 const exportComponent = (nvim) => async () => {
-    nvim.print("exporting svelte component...");
+    const tsparser = await nvim.getSvelteParser();
+    nvim.print(tsparser.toString());
     // const parser = new Parser()
     // parser.setLanguage(Svelte)
     // const sourceCode = await nvim.getBufText()

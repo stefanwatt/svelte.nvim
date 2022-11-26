@@ -5,6 +5,9 @@ class Nvim {
     constructor(nvim) {
         this.nvim = nvim;
     }
+    async getSvelteParser() {
+        return await this.nvim.lua("vim.treesitter.get_parser(0,'svelte')");
+    }
     async print(text) {
         await this.nvim.lua(`print('${text}')`);
     }
