@@ -11,8 +11,8 @@ export class Treesitter{
   tree:any
 
   constructor(){
-    // this.parser = new Parser()
-    // this.parser.setLanguage(Svelte)
+    this.parser = new Parser()
+    this.parser.setLanguage(Svelte)
   }
 
   public parse(sourceCode:string){
@@ -20,7 +20,7 @@ export class Treesitter{
     this.tree = this.parser.parse(sourceCode)
   } 
 
-  public get raw_text_expr() : string {
+  public get raw_text_expr(): string {
     if(!this.tree) return;
     const expressions = this.tree.rootNode.descendantsOfType('expression')
     const reference = expressions[0].descendantsOfType('raw_text_expr')[0]
