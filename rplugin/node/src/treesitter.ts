@@ -11,11 +11,12 @@ export class Treesitter{
   tree:any
 
   constructor(){
-    this.parser = new Parser()
-    this.parser.setLanguage(Svelte)
+    // this.parser = new Parser()
+    // this.parser.setLanguage(Svelte)
   }
 
   public parse(sourceCode:string){
+    if(!this.parser) return;
     this.tree = this.parser.parse(sourceCode)
   } 
 
