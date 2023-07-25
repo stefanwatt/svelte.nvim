@@ -1,7 +1,7 @@
-local D = require("your-plugin-name.util.debug")
+local D = require("svelte.util.debug")
 
 -- internal methods
-local YourPluginName = {}
+local Svelte = {}
 
 -- state
 local S = {
@@ -11,17 +11,17 @@ local S = {
 
 ---Toggle the plugin by calling the `enable`/`disable` methods respectively.
 ---@private
-function YourPluginName.toggle()
+function Svelte.toggle()
     if S.enabled then
-        return YourPluginName.disable()
+        return Svelte.disable()
     end
 
-    return YourPluginName.enable()
+    return Svelte.enable()
 end
 
 ---Initializes the plugin.
 ---@private
-function YourPluginName.enable()
+function Svelte.enable()
     if S.enabled then
         return S
     end
@@ -33,7 +33,7 @@ end
 
 ---Disables the plugin and reset the internal state.
 ---@private
-function YourPluginName.disable()
+function Svelte.disable()
     if not S.enabled then
         return S
     end
@@ -46,4 +46,4 @@ function YourPluginName.disable()
     return S
 end
 
-return YourPluginName
+return Svelte

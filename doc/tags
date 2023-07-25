@@ -1,2 +1,2 @@
-YourPluginName.options	neovim-plugin-boilerplate.txt	/*YourPluginName.options*
-YourPluginName.setup()	neovim-plugin-boilerplate.txt	/*YourPluginName.setup()*
+Svelte.options	svelte.txt	/*Svelte.options*
+Svelte.setup()	svelte.txt	/*Svelte.setup()*
